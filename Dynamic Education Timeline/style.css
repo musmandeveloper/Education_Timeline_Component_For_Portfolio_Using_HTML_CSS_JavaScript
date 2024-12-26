@@ -1,0 +1,144 @@
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+}
+
+.edu-timeline-container {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+
+.edu-timeline {
+    position: relative;
+    max-width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: transparent;
+}
+
+.edu-timeline::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: #007BFF;
+    z-index: 0;
+}
+
+.edu-node {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: transparent; /* Initially transparent */
+    border: 5px solid #007BFF; /* Consistent border size */
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.edu-node::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px; /* Smaller circle to hide line */
+    height: 10px;
+    background-color: #f4f4f9; /* Matches background to hide the line */
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.edu-node.edu-active {
+    background-color: black;
+    border-color: black;
+}
+
+.edu-node.edu-hover {
+    background-color: black;
+    border-color: black;
+}
+
+.edu-cards {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.edu-card {
+    width: 460px;
+    height: 170px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.edu-card.edu-active {
+    background-color: lightblue;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.edu-card.edu-hover {
+    background-color: lightblue;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.edu-card h5 {
+    margin: 0px 0px 10px;
+    text-align: left;
+    color: #007BFF;
+    font-size: 14px;
+}
+
+.edu-card h3 {
+    margin: 10px 0px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.edu-card h4 {
+    margin: 10px 0px;
+    text-align: left;
+    color: #007BFF;
+    font-size: 16px;
+}
+
+.edu-card p {
+    margin: 10px 0px 0px;
+    text-align: justify;
+    color: #666;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
