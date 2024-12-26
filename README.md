@@ -12,7 +12,7 @@ An interactive Education Timeline component built using **HTML**, **CSS**, and *
 - Simple and clean user interface
 
 ## Demo:
-Check out a live demo of the Education Timeline component [here](link-to-demo).
+Check out a live demo of the Education Timeline component [here](https://education-timeline-component.vercel.app).
 
 ## Installation/Usage:
 1. Clone the repository.
